@@ -3,7 +3,7 @@ FROM centos:7
 LABEL org.opencontainers.image.authors="vatamaniuc.sebi@gmail.com"
 
 RUN yum install -y httpd \
-zip\
+zip \
 unzip
 
 ADD https://github.com/mrhornsby/html5up-stellar/archive/refs/heads/master.zip /var/www/html/
