@@ -10,9 +10,9 @@ WORKDIR /var/www/html/
 
 RUN unzip master.zip
 
-RUN cp -rvf master/* .
+RUN cp -rvf html5up-stellar-master/* .
 
-RUN rm -rf master master.zip
+RUN rm -rf html5up-stellar-master master.zip
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
