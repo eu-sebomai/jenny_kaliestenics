@@ -6,15 +6,15 @@ RUN yum install -y httpd \
 zip\
 unzip
 
-ADD https://html5up.net/uploads/demos/story/download.zip /var/www/html/
+ADD https://github.com/mrhornsby/html5up-stellar/archive/refs/heads/master.zip /var/www/html/
 
 WORKDIR /var/www/html/
 
-RUN unzip download.zip
+RUN unzip master.zip
 
-RUN cp -rvf download/* .
+RUN cp -rvf master/* .
 
-RUN rm -rf download download.zip
+RUN rm -rf master master.zip
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
