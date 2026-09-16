@@ -6,7 +6,7 @@ RUN yum install -y httpd \
 zip\
 unzip
 
-ADD https://html5up.net/uploads/demos/story/download.zip /var/www/html/ /var/www/html/
+ADD https://html5up.net/uploads/demos/story/download.zip /var/www/html/
 
 WORKDIR /var/www/html/
 
