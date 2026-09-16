@@ -1,10 +1,8 @@
-FROM centos:7
+FROM rockylinux:9
 
 LABEL org.opencontainers.image.authors="vatamaniuc.sebi@gmail.com"
 
-RUN yum install -y httpd \
-zip \
-unzip
+RUN dnf install -y httpd unzip zip
 
 ADD https://github.com/mrhornsby/html5up-stellar/archive/refs/heads/master.zip /var/www/html/
 
