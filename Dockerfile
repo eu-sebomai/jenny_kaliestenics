@@ -6,15 +6,15 @@ RUN yum install -y httpd \
 zip\
 unzip
 
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
+ADD https://html5up.net/uploads/demos/story/download.zip /var/www/html/ /var/www/html/
 
 WORKDIR /var/www/html/
 
-RUN unzip photogenic.zip
+RUN unzip download.zip
 
-RUN cp -rvf photogenic/* .
+RUN cp -rvf download/* .
 
-RUN rm -rf photogenic photogenic.zip
+RUN rm -rf download download.zip
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
